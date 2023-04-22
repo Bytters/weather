@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+body {
+    background: linear-gradient(180deg, rgba(1, 1, 253, 0.70) 5%, rgba(0, 212, 255, 0.84) 93.89%);
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+article {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 32px;
+    padding: 1rem;
+    width: 35%;
+    margin: 4px;
+}
+
+table {
+    width: 100%;
+}
+
+.week {
+    text-align: center;
+}
+
+.text-table {
+    position: absolute;
+    right: 3rem;
+    width: 0;
+}
+
+.weatherInfo {
+    font-size: 32px;
+}
+
+
+#container-1 {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    margin-left: 7rem;
+    margin-top: 8rem;
+}
+
+.city {
+    position: relative;
+    width: 40rem;
+    text-align: center;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.5);
+    height: 30rem;
+    right: 14rem;
+
+}
+
+hr {
+    width: 100%;
+    border: 1px inset black;
+    opacity: .5;
+    margin: 0;
+}
+
+#search {
+    width: 15rem;
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+.borderBottom {
+    border-bottom: 1px solid red;
+    width: 15rem;
+    margin: 0;
+}
+
+#search::placeholder {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    opacity: .80;
+}
+
+#submitBtn {
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    bottom: 21px;
+    float: right;
+    background: none;
+}
+
+#searchIcon {
+    width: 2rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+
+input {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+input:focus {
+    outline: none;
+}
+
+
+@media screen and (max-width: 1106px) {
+    .city {
+        width: 35%;
+    }
+
+    #container-1 {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .city {
+        margin-left: 40%;
+        height: 20%;
+    }
+
+
+    .weatherInfo {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    #container-1 {
+        margin-left: 0;
+        margin-top: 0;
+        top: 27rem;
+        width: 20rem;
+        margin: 0 auto;
+    }
+
+    .container {
+        width: 30rem;
+        margin: 0;
+    }
+
+    .city {
+        width: 20rem;
+        left: 0;
+        margin-left: 0;
+    }
+
+    #City {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+}

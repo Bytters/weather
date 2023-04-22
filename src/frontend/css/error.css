@@ -1,0 +1,66 @@
+body {
+    background: linear-gradient(180deg, rgba(1, 1, 253, 0.70) 5%, rgba(0, 212, 255, 0.84) 93.89%);
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapperErr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#back {
+    color: white;
+    text-decoration: none;
+    margin-left: 6px;
+    font-size: 18px;
+    background: #00000082;
+    padding: 6px;
+    border-radius: 9px;
+    cursor: pointer;
+    position: absolute;
+top: 58%;
+}
+
+#back:hover {
+    background: #ffffff7e;
+    transition: .2s;
+}
+
+#errorText {
+    font-weight: 700;
+    font-size: 50px;
+    animation-name: changeColor;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+
+    background: #ffffff91;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+@keyframes changeColor {
+    from {
+        background: #00000091;
+
+        color: #ffffff
+    }
+
+    to {
+        background: #ffffff91;
+
+        color: #000000
+    }
+}
+
+@media screen and (max-width: 400px){
+    #errorText {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Weather</title>
+</head>
+
+<body>
+    <main class="weather-container">
+        <div id="City">
+            <div class="container" id="container-1">
+                <form action="/" method="get">
+                    <input type="text" name="city" id="search" placeholder="Pesquisar sua cidade" maxlength="50"
+                        autocomplete="off">
+                    <button type="submit" id="submitBtn"><img src="assets/search_icon.svg" alt=""
+                            id="searchIcon"></button>
+                    <hr>
+                </form>
+                <table class="principal-city">
+                    <tr class="cwb"> <!--Curitiba-->
+                        <td>
+                            <%= selectedCity.cwb.name %>
+                        </td>
+                        <td class="text-table">
+                            <%= selectedCity.cwb.temp %>
+                        </td>
+                    </tr>
+                    <tr class="sp"> <!--São Paulo-->
+                        <td>
+                            <%= selectedCity.sp.name %>
+                        </td>
+                        <td class="text-table">
+                            <%= selectedCity.sp.temp %>
+                        </td>
+                    </tr>
+                    <tr class="rj"> <!-- Rio de janeiro -->
+                        <td>
+                            <%= selectedCity.rj.name %>
+                        </td>
+                        <td class="text-table">
+                            <%= selectedCity.rj.temp %>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="city">
+            <img src="https://openweathermap.org/img/wn/<%= city.weather_icon %>@4x.png" alt="weather_icon"
+                id="weatherIcon">
+            <p class="weatherInfo">
+                <%= city.name %>
+            </p>
+            <p class="weatherInfo">
+                <%= city.temp %>
+            </p>
+        </div>
+    </main>
+</body>
+
+</html>
